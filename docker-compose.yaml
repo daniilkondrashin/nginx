@@ -7,6 +7,6 @@ services:
     volumes:
       - ../simplest-PWA-web-application:/usr/share/nginx/html/pwa-web-app
       - ../monitoring_start_page:/usr/share/nginx/html/monitoring_start_page
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/pwa-web-app.conf
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/monitoring_start_page.conf
+      - ./nginx/pwa-web-app.conf:/etc/nginx/conf.d/pwa-web-app.conf
+      - ./nginx/monitoring_start_page.conf:/etc/nginx/conf.d/monitoring_start_page.conf
     # restart: always
