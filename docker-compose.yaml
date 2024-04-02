@@ -9,4 +9,5 @@ services:
       - ../monitoring_start_page:/usr/share/nginx/html/monitoring_start_page
       - ./nginx/pwa-web-app.conf:/etc/nginx/conf.d/pwa-web-app.conf
       - ./nginx/monitoring_start_page.conf:/etc/nginx/conf.d/monitoring_start_page.conf
+      - ./nginx/xwiki.conf:/etc/nginx/conf.d/xwiki.conf
     # restart: always
