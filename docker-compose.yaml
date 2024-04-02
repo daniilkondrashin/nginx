@@ -5,6 +5,8 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ../simplest-PWA-web-application:/usr/share/nginx/html
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ../simplest-PWA-web-application:/usr/share/nginx/html/pwa-web-app
+      - ../monitoring_start_page:/usr/share/nginx/html/monitoring_start_page
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/pwa-web-app.conf
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/monitoring_start_page.conf
     # restart: always
