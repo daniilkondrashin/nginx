@@ -12,7 +12,7 @@ services:
       - ./nginx/xwiki.conf:/etc/nginx/conf.d/xwiki.conf
     # restart: always
     networks:
-      - xwiki-bridge
+      - xwiki-docker-compose_xwiki-bridge
 networks:
-  xwiki-bridge:
-    driver: bridge
+  xwiki-docker-compose_xwiki-bridge:
+    external: true
