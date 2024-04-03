@@ -11,3 +11,8 @@ services:
       - ./nginx/monitoring_start_page.conf:/etc/nginx/conf.d/monitoring_start_page.conf
       - ./nginx/xwiki.conf:/etc/nginx/conf.d/xwiki.conf
     # restart: always
+    networks:
+      - xwiki-bridge
+networks:
+  xwiki-bridge:
+    driver: bridge
