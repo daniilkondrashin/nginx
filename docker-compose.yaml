@@ -17,9 +17,9 @@ services:
     # restart: always
     networks:
       - xwiki-docker-compose_xwiki-bridge
-      - zabbix_zbx_net_backend
+      - nginx-proxy-manager
 networks:
   xwiki-docker-compose_xwiki-bridge:
     external: true
-  zabbix_zbx_net_backend:
-    external: true
+  nginx-proxy-manager:
+    driver: bridge
