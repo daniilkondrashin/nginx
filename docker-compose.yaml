@@ -17,7 +17,7 @@ services:
     # restart: always
     networks:
       - xwiki-docker-compose_xwiki-bridge
-      - nginx_nginx-proxy-manager
+      - nginx-proxy-manager
 networks:
   xwiki-docker-compose_xwiki-bridge:
     external: true
