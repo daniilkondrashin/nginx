@@ -17,18 +17,9 @@ services:
     # restart: always
     networks:
       - xwiki-docker-compose_xwiki-bridge
-      - zabbix_zbx_net_frontend
-      - zabbix_default
-      - zabbix_zbx_net_backend
-      - zabbix_zbx_net_database
+      - zbx_net_backend
 networks:
   xwiki-docker-compose_xwiki-bridge:
     external: true
-  zabbix_zbx_net_frontend:
-    external: true
-  zabbix_default:
-    external: true
-  zabbix_zbx_net_backend:
-    external: true
-  zabbix_zbx_net_database:
+  zbx_net_backend:
     external: true
