@@ -18,8 +18,11 @@ services:
     networks:
       - xwiki-docker-compose_xwiki-bridge
       - zabbix_zbx_net_frontend
+      - zabbix_default
 networks:
   xwiki-docker-compose_xwiki-bridge:
     external: true
   zabbix_zbx_net_frontend:
+    external: true
+  zabbix_default:
     external: true
