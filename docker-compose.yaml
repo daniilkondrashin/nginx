@@ -11,11 +11,15 @@ services:
       - ./nginx/pwa-web-app.conf:/etc/nginx/conf.d/pwa-web-app.conf
       - ./nginx/monitoring_start_page.conf:/etc/nginx/conf.d/monitoring_start_page.conf
       - ./nginx/xwiki.conf:/etc/nginx/conf.d/xwiki.conf
+      - ./nginx/zabbix.conf:/etc/nginx/conf.d/zabbix.conf
       - ./ssl:/etc/ssl/private:ro
       - ./ssl/ssl_password.pass:/etc/keys/global.pass:ro
     # restart: always
     networks:
       - xwiki-docker-compose_xwiki-bridge
+      - zabbix_zbx_net_frontend
 networks:
   xwiki-docker-compose_xwiki-bridge:
+    external: true
+  zabbix_zbx_net_frontend:
     external: true
