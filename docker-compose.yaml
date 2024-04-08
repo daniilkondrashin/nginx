@@ -12,6 +12,7 @@ services:
       - ./nginx/monitoring_start_page.conf:/etc/nginx/conf.d/monitoring_start_page.conf
       - ./nginx/xwiki.conf:/etc/nginx/conf.d/xwiki.conf
       - ./ssl:/etc/ssl/private:ro
+      - ./ssl/ssl_password.pass:/etc/keys/global.pass:ro
     # restart: always
     networks:
       - xwiki-docker-compose_xwiki-bridge
