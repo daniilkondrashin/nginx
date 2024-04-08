@@ -4,12 +4,14 @@ services:
     image: nginx:alpine
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ../simplest-PWA-web-application:/usr/share/nginx/html/pwa-web-app
       - ../monitoring_start_page:/usr/share/nginx/html/monitoring_start_page
       - ./nginx/pwa-web-app.conf:/etc/nginx/conf.d/pwa-web-app.conf
       - ./nginx/monitoring_start_page.conf:/etc/nginx/conf.d/monitoring_start_page.conf
       - ./nginx/xwiki.conf:/etc/nginx/conf.d/xwiki.conf
+      - ./ssl:/etc/ssl/private:ro
     # restart: always
     networks:
       - xwiki-docker-compose_xwiki-bridge
