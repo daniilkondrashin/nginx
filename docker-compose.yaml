@@ -14,7 +14,6 @@ services:
       - ./nginx/zabbix.conf:/etc/nginx/conf.d/zabbix.conf
       - ./ssl:/etc/ssl/private:ro
       - ./ssl/ssl_password.pass:/etc/keys/global.pass:ro
-      - ./nginx//nginx.conf:/etc/nginx/nginx.conf
       - ./logs:/var/log/nginx
     networks:
       - xwiki-docker-compose_xwiki-bridge
